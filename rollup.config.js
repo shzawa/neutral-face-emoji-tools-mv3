@@ -14,7 +14,8 @@ const config = {
     format: 'iife'
   },
   plugins: [
-    embedCSS(),
+    // embedCSSプラグインを無効化（エラーの原因）
+    // embedCSS(),
     svelte({
       dev: true
     }),
@@ -22,14 +23,14 @@ const config = {
       babelHelpers: 'bundled'
     }),
     resolve({
-			browser: true,
-			dedupe: ['svelte'],
-			preferBuiltins: true,
-		}),
-		commonjs(),
+  	browser: true,
+  	dedupe: ['svelte'],
+  	preferBuiltins: true,
+  }),
+  commonjs(),
     json(),
-		globals(),
-		builtins()
+  globals(),
+  builtins()
   ]
 };
 

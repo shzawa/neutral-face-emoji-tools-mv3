@@ -1,4 +1,14 @@
-import './styles/content.css';
+// CSSを動的に読み込む
+const loadCSS = () => {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = chrome.runtime.getURL('styles/content.css');
+  document.head.appendChild(link);
+};
+
+// CSSを読み込む
+loadCSS();
 
 import App from './components/app.svelte';
 
