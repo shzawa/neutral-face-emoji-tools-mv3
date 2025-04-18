@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rollup -c -w",
     "build": "rollup -c && npm run copy-static",
-    "copy-static": "ncp src/manifest.json dist/manifest.json && ncp src/images/ dist/images"
+    "copy-static": "ncp src/manifest.json dist/manifest.json && ncp src/images/ dist/images",
+    "package": "zip -r extension.zip dist"
   },
   "repository": {
     "type": "git",
