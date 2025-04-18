@@ -8,7 +8,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c && npm run copy-static",
     "copy-static": "ncp src/manifest.json dist/manifest.json && ncp src/images/ dist/images",
-    "package": "zip -j neutral-face-emoji-tools-mv3.zip dist/*"
+    "package": "mkdir -p temp/neutral-face-emoji-tools-mv3 && cp -r dist/* temp/neutral-face-emoji-tools-mv3/ && cd temp && zip -r ../neutral-face-emoji-tools-mv3.zip neutral-face-emoji-tools-mv3 && cd .. && rm -rf temp"
   },
   "repository": {
     "type": "git",
